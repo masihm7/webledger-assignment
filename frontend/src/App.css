@@ -1,0 +1,557 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+
+
+.bgrrot {
+    position: fixed;  /* Keeps it in the background */
+    top: 0;
+    left: 0;
+     width: 100%;
+    height: 100vh;
+    
+    z-index: -3; /* Push it behind everything */
+    
+    background-image: url("./assets/vecte.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.2;
+}
+
+
+
+#savedcontainer{
+    max-width: 60%;
+    margin: 150px auto;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 184, 155, 0.897);;
+}
+#savedcontainer>h2{
+    color: white;
+}
+#savedcard{
+    position: relative;
+    background-color: white;
+display: flex;
+flex-direction: column;
+gap: 10px;
+padding: 20px;
+box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+border-radius: 10px;
+max-height: 150px;
+}
+#imgdiv{
+    display: flex;
+    gap: 30px;
+}
+#imgdiv img{
+    max-width: 100px;
+    max-height: 100px;
+}
+#gtgt{
+    position: absolute;
+    top: 60px;
+    right: 30px;
+}
+#viewbtn{
+    position: absolute;
+    top: 60px;
+    left: 160px;
+    border: 2px solid teal;
+    padding: 7px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+#txtdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#imgdiv p{
+    font-size: large;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+@media (min-width: 700px) and (max-width: 980px) {
+    #landing-nav{
+        font-size: 14px;
+    }
+    #landing-nav #navsearch{
+        
+        width: 300px;
+    }
+    #landing-nav>div:nth-of-type(1) p{
+        display: none;
+    }
+    #landing-nav>div:nth-of-type(2) p:nth-of-type(even){
+        display: none;
+    }
+    footer button{
+        /* color: #000000; */
+        padding: 10px 50px;
+        width: 95%;
+    }
+    footer>div{
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    #imgdiv>p{
+        font-size: 14px;
+    }
+}
+
+
+
+@media (min-width: 400px) and (max-width: 700px) {
+    #landing-nav {
+        font-size: 14px;
+    }
+    #landing-nav #navsearch {
+        display: none;
+    }
+    #landing-nav > div:nth-of-type(1) p {
+        display: none;
+    }
+    #landing-nav>div:nth-of-type(1) {
+        padding: 0px;
+    }
+    #landing-nav > div:nth-of-type(2) {
+        display: none !important;
+    }
+    
+    #landing-nav > div:nth-of-type(2) .navlink {
+        display: none;
+    }
+    
+    footer button{
+        padding: 10px 50px;
+        width: 95%;
+    }
+    footer>div{
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    #imgdiv>p{
+        font-size: 12px;
+    }
+    #gtgt{
+        position: absolute;
+        top: 60px;
+        right: 10px;
+    }
+    #viewbtn{
+        position: absolute;
+        top: 80px;
+        left: 110px;
+        border: 2px solid teal;
+        padding: 2px 5px;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+    #savedcard{
+        gap: 5px;
+    }
+    #imgdiv>img{
+        width: 70px;
+        height: 70px;
+    }
+    #savedcontainer{
+        max-width: 80%;
+    }
+    #landing-nav #dlogo>h2{
+        display: none  ;
+    }
+}
+
+
+
+
+@media (min-width: 300px) and (max-width: 400px){
+    #landing-nav {
+        font-size: 12px;
+    }
+    #landing-nav #navsearch {
+        display: none;
+    }
+    #landing-nav > div:nth-of-type(1) p {
+        display: none;
+    }
+    #landing-nav>div:nth-of-type(1) {
+        padding: 0px;
+    }
+    #landing-nav > div:nth-of-type(2) {
+        display: none !important;
+    }
+    
+    #landing-nav > div:nth-of-type(2) .navlink {
+        display: none;
+    }
+    
+    footer button{
+        padding: 10px 50px;
+        width: 95%;
+    }
+    footer>div{
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    #imgdiv>p{
+        font-size: 10px;
+    }
+    #gtgt{
+        position: absolute;
+        top: 60px;
+        right: 10px;
+    }
+    #viewbtn{
+        position: absolute;
+        top: 60px;
+        left: 110px;
+        border: 2px solid teal;
+        padding: 2px 5px;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+    #savedcard{
+        gap: 5px;
+    }
+    #imgdiv>img{
+        width: 50px;
+        height: 50px;
+    }
+    #savedcontainer{
+        max-width: 90%;
+    }
+    #landing-nav #dlogo>h2{
+        display: none  ;
+    }
+    #landing-nav #dlogo~#navbtns>#navlink{
+        padding: 2px 5px;
+    }
+    #rtr{
+        display: flex;
+        gap: 10px;
+    }
+
+}
+
+
+
+
+
+#landing-nav{
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    max-width: 1530px;
+    background-color: white;
+    top: 0px;
+
+}
+#landing-nav>div:nth-of-type(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 25px;
+    
+}
+#landing-nav>div:nth-of-type(2){
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 35px;
+}
+#landing-nav>div:nth-of-type(2)>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid pink; */
+}
+#landing-nav h2{
+    color: #ef4f25;
+
+}
+#navsearch{
+    border: 1px solid #050505;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    
+}
+#navsearch input{
+    border: none;
+    padding: 10px 15px;
+}
+#navsearch button{
+    border: none;
+    padding: 10px 15px ;
+    background-color: rgb(239, 79, 37);
+    
+}
+#navbtns{
+    display: flex;
+    gap: 5px;  
+}
+#navbtns button{
+    border: none;
+    background-color: white;
+}
+
+.navlink{
+    text-decoration: none;
+    color: black;
+    padding: 2px 10px;
+    
+}
+.navlink:hover{
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: rgb(239, 79, 37)
+}
+
+
+footer button{
+    background-color: white;
+    border: 3px solid rgb(239, 79, 37);
+    font-weight: 700;
+    padding: 10px 90px;
+    width: 100%;
+}
+footer button:hover{
+    background-color: rgb(239, 79, 37);
+    color: white;
+}
+
+footer h2{
+    color: rgb(239, 79, 37);
+}
+footer>p{
+    text-align: center;
+    padding: 20px;
+}
+footer i{
+    transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+footer i:hover{
+    cursor: pointer;
+    transform: scale(1.3) ;
+}
+
+footer>div:nth-of-type(1){
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(242, 242, 242);
+    font-size: 14px;
+    padding: 50px 90px;
+    /* gap: 150px; */
+}
+
+footer>div:nth-of-type(1)>div:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+footer>div:nth-of-type(1)>div:nth-of-type(1)>div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+footer>div:nth-of-type(1)>div:nth-of-type(1)>div>div{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+footer>div:nth-of-type(1)>div:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+footer>div:nth-of-type(1)>div:nth-of-type(3){
+    display: flex;
+    gap: 15px;
+}
+
+footer>div:nth-of-type(1)>div:nth-of-type(3)>div:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+footer>div:nth-of-type(1)>div:nth-of-type(3)>div:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+#section1{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#section2{
+    margin: 100px 0px;
+}
+#section3{
+    margin: 100px 0px;
+}
+#section4{
+    margin: 100px 0px;
+}
+#section1>img{
+    width: 100%;
+}
+
+#section2>img{
+    width: 100%;
+}
+#section4>img{
+    width: 100%;
+}
+
+#section3 img{
+    width: 100%;
+}
+#section3>div{
+    display: grid;
+    grid-template-columns: repeat(3, 0.3fr);
+    justify-content: center;
+    gap: 50px;
+    /* padding: 10px 50px; */
+}
+#section3>div>div{
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#section3 h2{
+    text-align: center;
+}
+
+
+
+
+
+
+
+ #dlogo>h2{
+    display: inline ;
+}
+
+
+#details-container {
+    max-width: 90%;
+    margin: 120px auto;
+    
+}
+
+.recipe-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-title {
+    font-size: 26px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+}
+
+.recipe-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.info-section {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.list, .ingredients-list, .instructions-list {
+    list-style: none;
+    padding: 0;
+}
+
+.list li, .instructions-list li {
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.ingredients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ingredient-item {
+    display: flex;
+    align-items: center;
+    background: #eaeaea;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.ingredient-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+#details-container a {
+    color: #f69e41;
+    text-decoration: none;
+    font-weight: bold;
+}
+#details-container h3 {
+    color: #f69e41;
+    margin: 35px 0px 10px 0px;
+}
+
+#details-container a:hover {
+    text-decoration: underline;
+}
+
+#dlogo{
+    display: flex;
+    align-items: center;
+}
