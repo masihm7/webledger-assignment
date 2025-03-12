@@ -136,7 +136,7 @@
     border-radius: 50%;
     color: white;
     border: none;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out;
 }
 
 #cards #sdbtn:active{
