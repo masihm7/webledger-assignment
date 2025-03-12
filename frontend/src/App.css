@@ -555,3 +555,77 @@ footer>div:nth-of-type(1)>div:nth-of-type(3)>div:nth-of-type(2){
     display: flex;
     align-items: center;
 }
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    #logincontainer {
+        grid-template-areas: 
+            "a"
+            "b"
+            "c";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+
+#logincontainer{
+    display: grid;
+    grid-template-areas: 
+        "b  a"
+        "b  c"
+        "b  c";
+     grid-template-columns: 1.5fr 1fr; 
+    grid-template-rows: auto 1fr;  
+    height: 100vh;
+    gap: 10px;
+}
+
+
+
+#logincontainer>div:nth-of-type(1){
+ grid-area: b;
+ background: url('../assets/loginimg.jpg');
+ background-size: cover;
+background-position: center;
+ width: 100%;
+    height: 100%;
+}
+#logincontainer>div:nth-of-type(2){
+grid-area: a;
+text-align: center;
+    padding: 20px;
+}
+#logincontainer>div:nth-of-type(3){
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+}
+
+
+#logincontainer form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#logincontainer form input{
+    padding: 10px 20px;
+    width: 300px;
+}
+#logincontainer button{
+    padding: 10px 20px;
+    background-color: rgb(239, 79, 37);;
+    color: white;
+    border: none;
+    font-weight: 700;
+    font-size: large;
+}
