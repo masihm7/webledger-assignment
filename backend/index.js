@@ -11,25 +11,25 @@ const PORT = 3030;
 app.use(express.json());
 app.use(cors());
 
-const apiKey = process.env.SPOONACULAR_API_KEY;
-
 app.use("/auth",AuthRoutes);
 app.use("/recipes", SavedRoutes);
 
 app.get("/", (req, res) => {
-    res.status(200).json({ message: "Hello Bee" });
+    res.status(200).json({ message: "hey Bee" });
 });
 
-
+const apiKey = JSON.parse(process.env.SPOONACULAR_API_KEY)
+let i = 0
+function getApi(){
+    let le = i % apiKey.length
+    i+=1
+    return apiKey[le]
+}
 
 app.get("/show", async (req, res) => {
+    
     try {
-        const response = await axios.get("https://api.spoonacular.com/recipes/complexSearch", {
-            params: {
-                number: 3,
-                apiKey
-            }
-        });
+        const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?number=12&apiKey=${getApi()}`);
 
         res.status(200).json(response.data);
     } catch (error) {
@@ -45,13 +45,7 @@ app.get("/search", async (req, res) => {
             return res.status(400).json({ error: "No query provided" });
         }
 
-        const response = await axios.get("https://api.spoonacular.com/recipes/complexSearch", {
-            params: {
-                query,
-                number: 3,
-                apiKey
-            }
-        });
+        const response = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${encodeURIComponent(query)}&number=12&apiKey=${getApi()}`);
 
         res.status(200).json(response.data);
     } catch (error) {
@@ -66,12 +60,7 @@ app.get("/show/:id", async (req, res) => {
             return res.status(400).json({ error: "No id provided" });
         }
 
-        const response = await axios.get(
-            `https://api.spoonacular.com/recipes/${id}/information`,
-            {
-              params: { apiKey },
-            }
-          );
+        const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${getApi()}`);
 
         res.status(200).json(response.data);
     } catch (error) {
